@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{921779EA-5E12-4157-923B-175FDE972197}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Flower</RootNamespace>
+    <AssemblyName>TheFlowerOfHapinnes</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <LangVersion>11.0</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.8.0.1\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telegram.Bot, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Telegram.Bot.19.0.0\lib\netstandard2.0\Telegram.Bot.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialogs\Sub\BuildAndSendSubProcess.cs" />
+    <Compile Include="Dialogs\Sub\IsClientMadeItem.cs" />
+    <Compile Include="Dialogs\Sub\ISubProcess.cs" />
+    <Compile Include="Dialogs\UnknownProcess.cs" />
+    <Compile Include="Dialogs\ExecutingProcess.cs" />
+    <Compile Include="Dialogs\AdminDialogs\AboutClient.cs" />
+    <Compile Include="Dialogs\AdminDialogs\DeleteItemProcess.cs" />
+    <Compile Include="Dialogs\ClientDialogs\ClientIsNeedToPayProcess.cs" />
+    <Compile Include="Dialogs\ClientDialogs\ClientIsWentAroundProcess.cs" />
+    <Compile Include="Dialogs\ClientDialogs\ClientStartDialog.cs" />
+    <Compile Include="Dialogs\ClientDialogs\CheckClientSubscriptionProcess.cs" />
+    <Compile Include="Dialogs\DataDialog\PromoCodeProcess.cs" />
+    <Compile Include="Flower\Resources\CallBackCommandsArchieve.cs" />
+    <Compile Include="Flower\Resources\CollectionArchieve.cs" />
+    <Compile Include="Flower\Resources\Flower.cs" />
+    <Compile Include="Flower\Resources\MessageArchieve.cs" />
+    <Compile Include="Flower\SupportClasses\AvailableMessageTypes.cs" />
+    <Compile Include="Flower\SupportClasses\CallBackData.cs" />
+    <Compile Include="Dialogs\AdminDialogs\AprovePaymentDialog.cs" />
+    <Compile Include="Dialogs\AdminDialogs\DenyPaymentRequestDialog.cs" />
+    <Compile Include="Dialogs\AdminDialogs\DenyWishDialog.cs" />
+    <Compile Include="Dialogs\AdminDialogs\PrintItemProcess.cs" />
+    <Compile Include="Dialogs\AdminDialogs\PrintGameDataProcess.cs" />
+    <Compile Include="Dialogs\AdminDialogs\PrintGlobalStatisticsProcess.cs" />
+    <Compile Include="Dialogs\AdminDialogs\WriteToClientDialog.cs" />
+    <Compile Include="Dialogs\AdminDialogs\HelpDialog.cs" />
+    <Compile Include="Dialogs\AdminDialogs\MailingForAll.cs" />
+    <Compile Include="Dialogs\AdminDialogs\MailingForUnpayedDialog.cs" />
+    <Compile Include="Dialogs\AdminDialogs\NewDiscontPromoCodeDialog.cs" />
+    <Compile Include="Dialogs\AdminDialogs\PromoCodeInfoDialog.cs" />
+    <Compile Include="Dialogs\AdminDialogs\NewSpecialPromocodeDialog.cs" />
+    <Compile Include="Dialogs\ClientDialogs\ClientHelpProcess.cs" />
+    <Compile Include="Dialogs\DataDialog\DiscontPromoCodeDialog.cs" />
+    <Compile Include="Dialogs\ClientDialogs\PayDialog.cs" />
+    <Compile Include="Dialogs\ClientDialogs\PromocodeOrPayDialog.cs" />
+    <Compile Include="Flower\Resources\CommandGroup.cs" />
+    <Compile Include="Flower\Resources\AdminCommand.cs" />
+    <Compile Include="Flower\Resources\CommandArchieve.cs" />
+    <Compile Include="Dialogs\AdminDialogs\AnswerPresetationDialog.cs" />
+    <Compile Include="Dialogs\AdminDialogs\AnswerWishDialog.cs" />
+    <Compile Include="Dialogs\AdminDialogs\PrintListProcess.cs" />
+    <Compile Include="Dialogs\AdminDialogs\NewAdminDialog.cs" />
+    <Compile Include="Dialogs\AdminDialogs\NewPromoCodeDialog.cs" />
+    <Compile Include="Dialogs\AdminDialogs\StartDialog.cs" />
+    <Compile Include="Flower\SupportClasses\ClientInfoManager.cs" />
+    <Compile Include="Handlers\AdminCommandsHandler.cs" />
+    <Compile Include="Handlers\CallBackHandler.cs" />
+    <Compile Include="Handlers\GameMovingHandler.cs" />
+    <Compile Include="Handlers\MessageHandler.cs" />
+    <Compile Include="Handlers\PositionHandler.cs" />
+    <Compile Include="Handlers\ProcessHandler.cs" />
+    <Compile Include="Handlers\PromocodeHandler.cs" />
+    <Compile Include="Handlers\SignalHandler.cs" />
+    <Compile Include="Handlers\MoveHandler.cs" />
+    <Compile Include="Handlers\PaymentsHandler.cs" />
+    <Compile Include="Handlers\UserHandler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dialogs\ClientDialogs\PresentationProcess.cs" />
+    <Compile Include="Dialogs\ClientDialogs\PromocodeDialog.cs" />
+    <Compile Include="Dialogs\DataDialog\AnswerDialog.cs" />
+    <Compile Include="Dialogs\DataDialog\NumberDialog.cs" />
+    <Compile Include="Dialogs\DataDialog\TextDialog.cs" />
+    <Compile Include="Dialogs\DataDialog\VideoTextDialog.cs" />
+    <Compile Include="Dialogs\IStartProcess.cs" />
+    <Compile Include="Dialogs\ClientDialogs\MoveProcess.cs" />
+    <Compile Include="Dialogs\ClientDialogs\SelectCardProcess.cs" />
+    <Compile Include="Dialogs\ClientDialogs\SelectLeafProcess.cs" />
+    <Compile Include="Dialogs\ClientDialogs\WishProcess.cs" />
+    <Compile Include="Flower\SupportClasses\Creator.cs" />
+    <Compile Include="Flower\SupportClasses\Senders\DiceSender.cs" />
+    <Compile Include="Flower\TelegramBot.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MessageConverters\MessageConverters.csproj">
+      <Project>{896817ce-0dda-436e-96bc-3650ad5da09b}</Project>
+      <Name>MessageConverters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Messages\Messages.csproj">
+      <Project>{28eea48c-02c3-4533-926f-75a63930f17c}</Project>
+      <Name>Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="GameDataResources\GameDataResources.csproj">
+      <Project>{5d81002f-a1ed-4d73-b3aa-09ecc1bd44d9}</Project>
+      <Name>GameDataResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="Libraries\FileDataBase\FileDataBase.csproj">
+      <Project>{e2d8d339-c5e4-4e42-b779-ef9435b83239}</Project>
+      <Name>FileDataBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
