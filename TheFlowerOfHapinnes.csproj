@@ -162,21 +162,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MessageConverters\MessageConverters.csproj">
-      <Project>{896817ce-0dda-436e-96bc-3650ad5da09b}</Project>
-      <Name>MessageConverters</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Messages\Messages.csproj">
-      <Project>{28eea48c-02c3-4533-926f-75a63930f17c}</Project>
-      <Name>Messages</Name>
-    </ProjectReference>
-    <ProjectReference Include="GameDataResources\GameDataResources.csproj">
-      <Project>{5d81002f-a1ed-4d73-b3aa-09ecc1bd44d9}</Project>
-      <Name>GameDataResources</Name>
-    </ProjectReference>
     <ProjectReference Include="Libraries\FileDataBase\FileDataBase.csproj">
       <Project>{e2d8d339-c5e4-4e42-b779-ef9435b83239}</Project>
       <Name>FileDataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="Libraries\GameDataResources\GameDataResources.csproj">
+      <Project>{5d81002f-a1ed-4d73-b3aa-09ecc1bd44d9}</Project>
+      <Name>GameDataResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="Libraries\MessageConverters\MessageConverters.csproj">
+      <Project>{896817ce-0dda-436e-96bc-3650ad5da09b}</Project>
+      <Name>MessageConverters</Name>
+    </ProjectReference>
+    <ProjectReference Include="Libraries\Messages\Messages.csproj">
+      <Project>{28eea48c-02c3-4533-926f-75a63930f17c}</Project>
+      <Name>Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

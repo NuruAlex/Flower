@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28EEA48C-02C3-4533-926F-75A63930F17C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Messages</RootNamespace>
+    <AssemblyName>Messages</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <langVersion>10.0</langVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\TheFlowerOfHapinnes\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\TheFlowerOfHapinnes\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\TheFlowerOfHapinnes\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\TheFlowerOfHapinnes\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telegram.Bot, Version=19.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\TheFlowerOfHapinnes\packages\Telegram.Bot.19.0.0\lib\netstandard2.0\Telegram.Bot.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builders\MediaBuilders\AudioBuilder.cs" />
+    <Compile Include="Main\Builder.cs" />
+    <Compile Include="Builders\MediaBuilders\MediaBuilder.cs" />
+    <Compile Include="Builders\MessageBuilder.cs" />
+    <Compile Include="Builders\MediaBuilders\PhotoBuilder.cs" />
+    <Compile Include="Builders\TextBuilder.cs" />
+    <Compile Include="Builders\UnknownBuilder.cs" />
+    <Compile Include="Builders\MediaBuilders\VideoBuilder.cs" />
+    <Compile Include="Builders\MediaBuilders\VideoNoteBuilder.cs" />
+    <Compile Include="Builders\MediaBuilders\VoiceBuilder.cs" />
+    <Compile Include="Reply\Buttons\IButton.cs" />
+    <Compile Include="Reply\CallBack\CallBackCode.cs" />
+    <Compile Include="Reply\CallBack\CallBackPacket.cs" />
+    <Compile Include="Reply\Markups\IMarkup.cs" />
+    <Compile Include="Reply\Markups\IMarkupItem.cs" />
+    <Compile Include="Reply\Buttons\InlineButton.cs" />
+    <Compile Include="Reply\Markups\InlineMarkup.cs" />
+    <Compile Include="Reply\Markups\RemoveMarkup.cs" />
+    <Compile Include="Reply\Markups\UnknownMarkup.cs" />
+    <Compile Include="Reply\Rows\InlineRow.cs" />
+    <Compile Include="Reply\Rows\IRow.cs" />
+    <Compile Include="Reply\Buttons\ReplyButton.cs" />
+    <Compile Include="Reply\Markups\ReplyMarkup.cs" />
+    <Compile Include="Reply\Rows\ReplyRow.cs" />
+    <Compile Include="Main\Sender.cs" />
+    <Compile Include="Senders\DiceSender.cs" />
+    <Compile Include="Senders\MediaSenders\AudioSender.cs" />
+    <Compile Include="Senders\UnknownSender.cs" />
+    <Compile Include="Types\Downloader.cs" />
+    <Compile Include="Main\PathCreator.cs" />
+    <Compile Include="Main\PathsArchieve.cs" />
+    <Compile Include="Main\SenderClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Senders\ContactSender.cs" />
+    <Compile Include="Senders\MediaSenders\MediaSender.cs" />
+    <Compile Include="Senders\MessageSender.cs" />
+    <Compile Include="Senders\MediaSenders\PhotoSender.cs" />
+    <Compile Include="Senders\TextSender.cs" />
+    <Compile Include="Senders\MediaSenders\VideoNoteSender.cs" />
+    <Compile Include="Senders\MediaSenders\VideoSender.cs" />
+    <Compile Include="Senders\MediaSenders\VoiceSender.cs" />
+    <Compile Include="Types\TelegramContacts.cs" />
+    <Compile Include="Reply\CallBack\CallBackPacket_1.cs" />
+    <Compile Include="Types\MediaType\TelegramAudio.cs" />
+    <Compile Include="Types\MultiMessage.cs" />
+    <Compile Include="Types\MediaType\TelegramMedia.cs" />
+    <Compile Include="Types\TelegramDiceMessage.cs" />
+    <Compile Include="Types\TelegramMessage.cs" />
+    <Compile Include="Types\MediaType\TelegramPhoto.cs" />
+    <Compile Include="Types\MediaType\TelegramVideo.cs" />
+    <Compile Include="Types\MediaType\TelegramVideoNote.cs" />
+    <Compile Include="Types\MediaType\TelegramVoice.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
